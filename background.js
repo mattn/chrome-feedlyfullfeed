@@ -41,10 +41,6 @@ function getSiteInfo(data, callback){
 window.onload = function() {
   var ports = [];
   
-  chrome.tabs.onUpdated.addListener(function(id) {
-    chrome.pageAction.show(id);
-  });
-
   chrome.extension.onConnect.addListener(function(port) {
     ports.push(port);
     
